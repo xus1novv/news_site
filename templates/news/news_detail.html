@@ -1,0 +1,17 @@
+{%extends 'news/base.html'%}
+{% load static %}
+
+{% block title %}{{news.title}}{%  endblock title   %}
+
+{%block content%}
+<section class="about-upper-section" itemprop="mainContentofPage">
+			<div class="container">
+				<article class="who-we-are">
+                    <h2 class="text-center" style = "margin:50px;">{{news.title}}</h2>
+                    <img src="{{news.image.url}}" alt="This is image" style="width:100%;">
+					<p style="font-size:25px;">{{news.body}}</p>
+                    <h1>{{news.publish_time}}</h1>
+                </article>
+            </div>
+</section>
+{%endblock content%}
